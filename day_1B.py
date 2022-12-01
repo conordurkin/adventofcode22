@@ -19,5 +19,9 @@ for entry in data.food:
     else:
         list_of_calories[counter] += entry
 
-# Print the largest calorie value (note: has to be integer, not a float!)
-print(int(max(list_of_calories)))
+# Okay, for Part B, we need to get the top 3 values.
+# I do this by sorting in descending order, then sum the first three entries.
+# Pretty trivial after you've solved Part A, tbh.
+
+list_of_calories.sort(reverse = True)
+print(int(sum(list_of_calories[0:3])))
