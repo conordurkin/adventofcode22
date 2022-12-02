@@ -1,8 +1,9 @@
+# Read in Pandas and the data
 import pandas as pd
-
 data = pd.read_csv('data/day2.csv', header = None, skip_blank_lines = False, sep = ' ')
 data.columns = ['Play', 'Response']
 
+# Function to calculate scores - first calc the outcome of each match, then the shape point, then combine
 def score_calc(df):
     play = df.Play
     response = df.Response
@@ -28,6 +29,7 @@ def score_calc(df):
     score = shape + outcome
     return score
 
+# Function works on a given row - so we just apply the function over the DF, then sum the resulting list. 
 scores = data.apply(score_calc, axis = 1)
 
 print(scores.sum())
