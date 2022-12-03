@@ -1,5 +1,5 @@
 import pandas as pd
-data = pd.read_csv('adventofcode22/data/day3.csv', header = None, skip_blank_lines = False)[0]
+data = pd.read_csv('data/day3.csv', header = None, skip_blank_lines = False)[0]
 
 # Function to return the doubled item, for a given entry
 def find_item(entry):
@@ -28,5 +28,5 @@ def alpha_converter(letter):
 # Apply function over list with a list comprehension
 item_values = [alpha_converter(letter) for letter in items]
 
-# Print the total! 
+# Print the total!
 print(sum(item_values))
