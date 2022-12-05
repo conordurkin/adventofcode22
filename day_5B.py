@@ -1,5 +1,5 @@
 import pandas as pd
-with open('adventofcode22/data/day5.csv') as file:
+with open('data/day5.csv') as file:
     data = file.readlines()
 
 # Again, two sets in the data - grid and moves
@@ -50,6 +50,6 @@ for move in move_list:
             stack_list[dropoff].insert(-counter, box_to_move)
         counter += 1
 
-# Then we again find the top boxes and join the string. 
+# Then we again find the top boxes and join the string.
 top_boxes = [stack.pop() for stack in stack_list]
 print(''.join(top_boxes))
